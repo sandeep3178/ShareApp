@@ -1,0 +1,62 @@
+<app-header [headerImgURL]="headerImg"></app-header>
+
+<div class="col-sm-2">
+  <app-sidebar></app-sidebar>
+</div>
+<div class="col-sm-6">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <title>DashBoard</title>
+  </head>
+  <body>
+    <h3>Upload Profile Picture</h3>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <form [formGroup]="profileUpdate">
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>File</span>
+          <span style="color: red;" *ngIf="message">{{ message }}</span>
+          <input
+            type="file"
+            id="image"
+            name="image"
+            #file
+            (change)="privew(file.files)"
+          />
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" style="width: 25%" type="text" />
+        </div>
+      </div>
+
+      <button class="btn btn-primary">Submit</button>
+      <img
+        [src]="imgURL"
+        style="margin-left: 30%;margin-top: -10%"
+        height="200"
+        *ngIf="imgURL"
+      />
+    </form>
+  </body>
+</div>
+<br />
+<br />
+<div class="col-sm-4">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- <img src="{{ renderimg }}" /> -->
+
+<app-footer></app-footer>

@@ -1,0 +1,25 @@
+<div>
+  <table style="width : 50%" class="table table-striped">
+    <tr>
+      <th>Find Friend</th>
+    </tr>
+    <tr>
+      <th>name</th>
+      <th>email</th>
+    </tr>
+
+    <tbody>
+      <td>{{ name }}</td>
+      <td>{{ email }}</td>
+      <td>
+        <button
+          class="btn btn-primary"
+          (click)="friendRequest()"
+          id="myButton1"
+        >
+          add friend
+        </button>
+      </td>
+    </tbody>
+  </table>
+</div>

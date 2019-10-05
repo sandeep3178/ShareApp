@@ -1,0 +1,9 @@
+<form [formGroup]="verify" (ngSubmit)="onSubmit()">
+    <label> enter your token here
+    </label>
+    <input type="text" id="token" formControlName="token">
+    <label> enter your email here
+    </label>
+    <input type="text" id="email" formControlName="email">
+    <button class="btn btn primary" type="submit">submit</button>
+</form>

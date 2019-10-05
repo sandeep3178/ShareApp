@@ -1,0 +1,25 @@
+<div class="col-sm-1">
+  <table style="width:10%">
+    <th>
+      <b><i>FRIENDS</i></b>
+    </th>
+    <tbody>
+      <tr *ngFor="let myfriend of myfriends">
+        <td>{{ myfriend.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="col-sm-2" style="margin-left: 20%">
+  <table style="width:10%;position: relative;">
+    <th>
+      <b><i>Image</i></b>
+    </th>
+    <tbody>
+      <tr *ngFor="let img of imgurl">
+        <td><img style="width: 120%" src="{{ img }}" /></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

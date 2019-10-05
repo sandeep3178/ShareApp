@@ -1,0 +1,41 @@
+<div id="viewport">
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <header>
+      <a routerLink="/dashboard">MyFriends</a>
+    </header>
+    <ul class="nav">
+      <li>
+        <a routerLink="/dashboard/myfriend" (click)="friendList()"
+          >Friend-List</a
+        >
+      </li>
+      <li>
+        <a routerLink="/dashboard/request" (click)="newfunc()"
+          >Friend Request</a
+        >
+      </li>
+      <li>
+        <a routerLink="/dashboard/findfriend">FindFriend</a>
+      </li>
+    </ul>
+    <header>
+      <a routerLink="/dashboard">ShareApp</a>
+    </header>
+    <ul class="nav">
+      <li>
+        <a routerLink="/fileupload">File-Upload</a>
+      </li>
+      <li>
+        <a routerLink="/dashboard/myfile" (click)="newfunc1()">My-Files</a>
+      </li>
+      <li>
+        <a routerLink="/sharefile">Shared with friends</a>
+      </li>
+      <li>
+        <a routerLink="/dashboard/findfriend">Shared with me</a>
+      </li>
+    </ul>
+  </div>
+  <!-- Content -->
+</div>

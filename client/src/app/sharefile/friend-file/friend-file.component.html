@@ -1,0 +1,46 @@
+<img
+  *ngFor="let url of urls"
+  [src]="url"
+  class="rounded mb-3"
+  width="300"
+  height="250"
+/>
+<div style="margin-left: 35%;margin-top: 2%">
+  <form [formGroup]="sharefile">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Friend's Email Address or Name</label>
+      <input
+        type="email"
+        class="form-control"
+        style="width: 15%"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter email"
+        formControlName="email"
+      />
+      <div
+        style="width: 50%;margin-left: -18%"
+        class="file-uploader__message-area"
+      >
+        <p>Select a file to upload</p>
+      </div>
+      <div class="file-chooser" style="margin-left: -20%">
+        <input
+          style="width: 50%"
+          class="file-chooser__input"
+          type="file"
+          multiple
+          name="mutiImage"
+          #file
+          (change)="onSubmit($event)"
+        />
+      </div>
+      <input
+        style="width: 25%"
+        class="file-uploader__submit-button"
+        type="submit"
+        value="Upload"
+      />
+    </div>
+  </form>
+</div>

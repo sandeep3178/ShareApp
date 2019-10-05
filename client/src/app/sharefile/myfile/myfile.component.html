@@ -1,0 +1,7 @@
+<h1 style="background-color: yellow;">
+  My Uploaded Files
+</h1>
+<div style="display:inline;" *ngFor="let new of newdata">
+  <img style="width: 50%" src="http://localhost:3000/{{ new }}" />
+  <button class="btn btn-primary" (click)="delete(new)">DELETE</button>
+</div>
